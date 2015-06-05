@@ -21,3 +21,11 @@ Brother HL-L2300D series
 
 Document will be printed in standard A4 page.
 
+##installation
+
+Download the last release on github release tab, the move it into `/url/local/bin`
+
+##releasing
+
+Archive using xcode then export the archive somewhere. Go get the binary in `print-cli/usr/local/bin` and draft a new release on github.
+
