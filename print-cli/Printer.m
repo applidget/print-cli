@@ -11,6 +11,12 @@
 
 @implementation Printer
 
+static NSString const* kPrinterNameKey = @"NSPrinterName";
+
++ (NSString *) currentPrinter {
+  return   [[NSPrintInfo sharedPrintInfo].dictionary objectForKey:kPrinterNameKey];
+}
+
 + (NSArray *) availablePrinters {
   return [NSPrinter printerNames];
 }
@@ -30,7 +36,7 @@
     printInfo.printer = printer;
   }
   
-  NSLog(@"Printing %@ on %@ printer", file, [printInfo.dictionary objectForKey:@"NSPrinterName"]);
+  NSLog(@"Printing %@ on %@ printer", file, [printInfo.dictionary objectForKey:kPrinterNameKey]);
   
   printInfo.paperName = @"A4";
   

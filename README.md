@@ -8,6 +8,7 @@
 
 ````
 Usage: printer-cli /path/to/file ["printer name"]
+Current printer: Brother HL-2250DN series
 Available printers:
 Brother HL-2250DN series
 Brother HL-2250DN series @ admin’s Mac mini

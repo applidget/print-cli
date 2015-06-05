@@ -12,6 +12,7 @@
 
 #define NSLog(FORMAT, ...) fprintf(stderr,"%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 
++ (NSString *) currentPrinter;
 + (NSArray *) availablePrinters;
 + (int) printPDF:(NSURL *)file onPrinter:(NSString *) printerName;
 

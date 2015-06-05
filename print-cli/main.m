@@ -15,6 +15,7 @@ int main(int argc, const char * argv[]) {
     
     if (argc == 1) {
       NSLog(@"Usage: printer-cli /path/to/file [\"printer name\"]");
+      NSLog(@"Current printer: %@", [Printer currentPrinter]);
       NSLog(@"Available printers:");
       NSArray *printers = [Printer availablePrinters];
       for (NSString *name in printers) {
