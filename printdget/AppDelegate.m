@@ -57,12 +57,7 @@
     NSLog(@"Unresolved error while deleting file: %@", [error description])
   }
   
-  //TODO:
-  // 1: decode the url to get the pdf file url
-  // 2: download the pdf to a temporary file
-  // 3: use Printer class code to print the pdf
-  // 4: delete the PDF
-  // 5: exit the app
+  [NSApp terminate:self];
   
 }
 
