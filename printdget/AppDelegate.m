@@ -30,8 +30,32 @@
 }
 
 - (void)handleURLEvent:(NSAppleEventDescriptor*)event withReplyEvent:(NSAppleEventDescriptor*)replyEvent {
-  NSString* url = [[event paramDescriptorForKeyword:keyDirectObject] stringValue];
-  NSLog(@"%@", url);
+  NSString* urlString = [[event paramDescriptorForKeyword:keyDirectObject] stringValue];
+  urlString = [[urlString stringByReplacingOccurrencesOfString:@"printget::/" withString:@""] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+  NSLog(@"urlString === > %@", urlString);
+  
+  NSURL *url = [NSURL URLWithString:urlString];
+  NSData *urlData = [NSData dataWithContentsOfURL:url];
+  NSString *filePath = nil;
+  if (urlData) {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory, @"printget.pdf"];
+    [urlData writeToFile:filePath atomically:YES];
+    NSLog(@"filePath ===> %@", filePath);
+  } else {
+    NSLog(@"NO URL DATA");
+    [NSApp terminate:self];
+  }
+  
+  [Printer printPDF:[NSURL URLWithString:filePath] onPrinter:[Printer currentPrinter]];
+  
+  NSFileManager *fileManager = [NSFileManager defaultManager];
+  NSError *error = nil;
+  [fileManager removeItemAtPath:filePath error:&error];
+  if (error) {
+    NSLog(@"Unresolved error while deleting file: %@", [error description])
+  }
   
   //TODO:
   // 1: decode the url to get the pdf file url
@@ -39,10 +63,6 @@
   // 3: use Printer class code to print the pdf
   // 4: delete the PDF
   // 5: exit the app
-  
-  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-    [NSApp terminate:self];
-  });
   
 }
 
