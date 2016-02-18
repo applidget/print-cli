@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BA974301C566A6600258CFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9742F1C566A6600258CFE /* AppDelegate.m */; };
+		3BA974331C566A6600258CFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA974321C566A6600258CFE /* main.m */; };
+		3BA974351C566A6600258CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BA974341C566A6600258CFE /* Assets.xcassets */; };
+		3BA974381C566A6600258CFE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BA974361C566A6600258CFE /* MainMenu.xib */; };
+		3BA9743D1C566A8900258CFE /* Printer.h in Sources */ = {isa = PBXBuildFile; fileRef = 3BB281F71B21D466002E883A /* Printer.h */; };
+		3BA9743E1C566A8900258CFE /* Printer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB281F81B21D466002E883A /* Printer.m */; };
 		3BB281F11B21D415002E883A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB281F01B21D415002E883A /* main.m */; };
 		3BB281F91B21D466002E883A /* Printer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB281F81B21D466002E883A /* Printer.m */; };
 /* End PBXBuildFile section */
@@ -24,6 +30,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3BA9742C1C566A6600258CFE /* printdget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = printdget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BA9742E1C566A6600258CFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3BA9742F1C566A6600258CFE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3BA974321C566A6600258CFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3BA974341C566A6600258CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BA974371C566A6600258CFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3BA974391C566A6600258CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BB281ED1B21D415002E883A /* print-cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "print-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB281F01B21D415002E883A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3BB281F71B21D466002E883A /* Printer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Printer.h; sourceTree = "<group>"; };
@@ -31,6 +44,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3BA974291C566A6600258CFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3BB281EA1B21D415002E883A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,10 +61,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BA9742D1C566A6600258CFE /* printdget */ = {
+			isa = PBXGroup;
+			children = (
+				3BA9742E1C566A6600258CFE /* AppDelegate.h */,
+				3BA9742F1C566A6600258CFE /* AppDelegate.m */,
+				3BA974341C566A6600258CFE /* Assets.xcassets */,
+				3BA974361C566A6600258CFE /* MainMenu.xib */,
+				3BA974391C566A6600258CFE /* Info.plist */,
+				3BA974311C566A6600258CFE /* Supporting Files */,
+			);
+			path = printdget;
+			sourceTree = "<group>";
+		};
+		3BA974311C566A6600258CFE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BA974321C566A6600258CFE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		3BB281E41B21D415002E883A = {
 			isa = PBXGroup;
 			children = (
 				3BB281EF1B21D415002E883A /* print-cli */,
+				3BA9742D1C566A6600258CFE /* printdget */,
 				3BB281EE1B21D415002E883A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				3BB281ED1B21D415002E883A /* print-cli */,
+				3BA9742C1C566A6600258CFE /* printdget.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +113,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3BA9742B1C566A6600258CFE /* printdget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BA9743C1C566A6600258CFE /* Build configuration list for PBXNativeTarget "printdget" */;
+			buildPhases = (
+				3BA974281C566A6600258CFE /* Sources */,
+				3BA974291C566A6600258CFE /* Frameworks */,
+				3BA9742A1C566A6600258CFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = printdget;
+			productName = printdget;
+			productReference = 3BA9742C1C566A6600258CFE /* printdget.app */;
+			productType = "com.apple.product-type.application";
+		};
 		3BB281EC1B21D415002E883A /* print-cli */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BB281F41B21D415002E883A /* Build configuration list for PBXNativeTarget "print-cli" */;
@@ -96,6 +156,9 @@
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = Applidget;
 				TargetAttributes = {
+					3BA9742B1C566A6600258CFE = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					3BB281EC1B21D415002E883A = {
 						CreatedOnToolsVersion = 6.2;
 					};
@@ -107,6 +170,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 3BB281E41B21D415002E883A;
 			productRefGroup = 3BB281EE1B21D415002E883A /* Products */;
@@ -114,11 +178,35 @@
 			projectRoot = "";
 			targets = (
 				3BB281EC1B21D415002E883A /* print-cli */,
+				3BA9742B1C566A6600258CFE /* printdget */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		3BA9742A1C566A6600258CFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BA974351C566A6600258CFE /* Assets.xcassets in Resources */,
+				3BA974381C566A6600258CFE /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		3BA974281C566A6600258CFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BA9743D1C566A8900258CFE /* Printer.h in Sources */,
+				3BA9743E1C566A8900258CFE /* Printer.m in Sources */,
+				3BA974331C566A6600258CFE /* main.m in Sources */,
+				3BA974301C566A6600258CFE /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3BB281E91B21D415002E883A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -130,7 +218,50 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		3BA974361C566A6600258CFE /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BA974371C566A6600258CFE /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		3BA9743A1C566A6600258CFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = printdget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.applidget.printdget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3BA9743B1C566A6600258CFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = printdget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.applidget.printdget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		3BB281F21B21D415002E883A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -222,6 +353,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3BA9743C1C566A6600258CFE /* Build configuration list for PBXNativeTarget "printdget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BA9743A1C566A6600258CFE /* Debug */,
+				3BA9743B1C566A6600258CFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		3BB281E81B21D415002E883A /* Build configuration list for PBXProject "print-cli" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -238,6 +377,7 @@
 				3BB281F61B21D415002E883A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
